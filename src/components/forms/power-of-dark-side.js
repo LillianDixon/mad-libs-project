@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class ForcePower extends Component {
+export default class DarkSidePower extends Component {
     constructor(props){
         super(props)
 
@@ -43,7 +43,8 @@ export default class ForcePower extends Component {
     render() {
         return (
             <div class='mad-libs-wrapper'>
-                The Power of the Force
+                <h1>The Power of the Dark Side</h1>
+                <h2>By Emperor Palpatine</h2>
                 {this.state.active === false ?(
                 <form onSubmit={this.handleSubmit}>
                     <input

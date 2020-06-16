@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './home';
 import SickDayForm from './forms/sick-day-form';
 import ForcePower from "./forms/power-of-force";
+import DarkSidePower from "./forms/power-of-force";
 
 export default class App extends Component {
   render() {
@@ -14,6 +15,7 @@ export default class App extends Component {
               <Route exact path="/" component={Home}/>
               <Route path="/sick-day-form" component={SickDayForm}/>
               <Route path="/power-of-force" component={ForcePower}/>
+              <Route path="/power-of-dark-side" component={DarkSidePower}/>
             </Switch>
           </div>
         </Router>
