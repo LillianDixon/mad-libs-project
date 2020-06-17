@@ -8,6 +8,7 @@ export default class Home extends Component {
                 Welcome to mad libs
                 <NavLink to='/sick-day-form'>Sick Day</NavLink>
                 <NavLink to='/power-of-force'>The Power of the Force</NavLink>
+                <NavLink to='/power-of-dark-side'>The Power of the Dark Side</NavLink>
             </div>
         );
     }

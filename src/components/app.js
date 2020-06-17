@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './home';
 import SickDayForm from './forms/sick-day-form';
 import ForcePower from "./forms/power-of-force";
-import DarkSidePower from "./forms/power-of-force";
+import DarkSidePower from "./forms/power-of-dark-side";
 
 export default class App extends Component {
   render() {

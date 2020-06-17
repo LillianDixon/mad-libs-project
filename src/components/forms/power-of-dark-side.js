@@ -13,11 +13,12 @@ export default class DarkSidePower extends Component {
             pluralNoun2: "",
             noun1: "",
             noun2: "",
-            bodyPart1: "",
-            bodyPart2: "",
-            bodyPartPlural: "",
-            adverb1: "",
-            adverb2: "",
+            noun3: "",
+            noun4: "",
+            adverb: "",
+            verbing: "",
+            lastName: "",
+            verb: "",
             active: false,
         }
         
@@ -49,9 +50,25 @@ export default class DarkSidePower extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <input
                         type='text'
+                        name='noun1'
+                        placeholder='Noun'
+                        value={this.state.noun1}
+                        onChange={this.handleChange}
+                    />
+                    
+                    <input
+                        type='text'
                         name='adjective1'
                         placeholder='Adjective'
                         value={this.state.adjective1}
+                        onChange={this.handleChange}
+                    />
+                    
+                    <input
+                        type='text'
+                        name='noun2'
+                        placeholder='Noun'
+                        value={this.state.noun2}
                         onChange={this.handleChange}
                     />
                     
@@ -65,9 +82,9 @@ export default class DarkSidePower extends Component {
                     
                     <input
                         type='text'
-                        name='noun1'
-                        placeholder='Noun'
-                        value={this.state.noun1}
+                        name='verbing'
+                        placeholder='Verb Ending in "ING"'
+                        value={this.state.verbing}
                         onChange={this.handleChange}
                     />
                     
@@ -81,9 +98,9 @@ export default class DarkSidePower extends Component {
                     
                     <input
                         type='text'
-                        name='bodyPart1'
-                        placeholder='Part of Body'
-                        value={this.state.bodyPart1}
+                        name='adverb'
+                        placeholder='Adverb'
+                        value={this.state.adverb}
                         onChange={this.handleChange}
                     />
                     
@@ -97,57 +114,49 @@ export default class DarkSidePower extends Component {
                     
                     <input
                         type='text'
-                        name='pluralNoun2'
-                        placeholder='Plural Noun'
-                        value={this.state.pluralNoun2}
-                        onChange={this.handleChange}
-                    />
-                    
-                    <input
-                        type='text'
-                        name='bodyPart2'
-                        placeholder='Part of Body'
-                        value={this.state.bodyPart2}
-                        onChange={this.handleChange}
-                    />
-                    
-                    <input
-                        type='text'
                         name='adjective4'
                         placeholder='Adjective'
                         value={this.state.adjective4}
                         onChange={this.handleChange}
                     />
-                    
+                                        
                     <input
                         type='text'
-                        name='adverb1'
-                        placeholder='Adverb'
-                        value={this.state.adverb1}
+                        name='pluralNoun2'
+                        placeholder='Plural Noun'
+                        value={this.state.pluralNoun2}
                         onChange={this.handleChange}
                     />
                                         
                     <input
                         type='text'
-                        name='noun2'
+                        name='noun3'
                         placeholder='Noun'
-                        value={this.state.noun2}
+                        value={this.state.noun3}
                         onChange={this.handleChange}
                     />
                                         
                     <input
                         type='text'
-                        name='bodyPartPlural'
-                        placeholder='Part of Body (Plural)'
-                        value={this.state.bodyPartPlural}
+                        name='lastName'
+                        placeholder='Last Name of Person in Room'
+                        value={this.state.lastName}
+                        onChange={this.handleChange}
+                    />
+                                                            
+                    <input
+                        type='text'
+                        name='noun4'
+                        placeholder='Noun'
+                        value={this.state.noun4}
                         onChange={this.handleChange}
                     />
                                         
                     <input
                         type='text'
-                        name='adverb2'
-                        placeholder='Adverb'
-                        value={this.state.adverb2}
+                        name='verb'
+                        placeholder='Verb'
+                        value={this.state.verb}
                         onChange={this.handleChange}
                     />
 
@@ -158,7 +167,7 @@ export default class DarkSidePower extends Component {
 
                 <div class='result'>
                     <div class='text-wrapper'>
-                        <p>{`The Force is a mystical, ${this.state.adjective1} power. As Jedi Master Obi-Wan Kenobi once said, "The Fource is an energy field, created by all living ${this.state.pluralNoun1}, that surrounds us, penetrates us, and binds the ${this.state.noun1} together."  Using the power of the Force, a Jedi can do many ${this.state.adjective2} things, like using the Force to exercise ${this.state.bodyPart1} control over ${this.state.adjective3}-minded ${this.state.pluralNoun2}. A Jedi can also use the Force to move objects with his or her ${this.state.bodyPart2}. It doesn't matter how ${this.state.adjective4} these objects are; it only matters how ${this.state.adverb1} the Jedi believes in the Force. Most importantly, the Force teaches a Jedi to rely on his or her feelings. As Obi-Wan Kenobi told his student, Luke ${this.state.noun2}-walker: "Your ${this.state.bodyPartPlural} can decieve you. Don't trust them." Instead a Jedi should ${this.state.adverb2} trust in the Force.`}</p>
+                        <p>{`As ${this.state.noun1} Sidious--Sith Lord and ${this.state.adjective1} leader of the Galactic Empire--I know firsthand how powerful the dark side of the Force is. If you become a Sith, a/an ${this.state.noun2} who uses the dark side of the Force, you'll have all the powers of the Jedi and more. Unlike the Jedi, who only work with the light side of the Force, the sith can use the dark side to stop the ${this.state.pluralNoun1} he or she love from ${this.state.verbing}. The Jedi would never try such a/an ${this.state.adjective2} thing. It's obvious to anyone who has studied the dark side that it is more powerful than the Jedi could ${this.state.adverb} imagine. The Jedi might tell you that the dark side is quicker, easier, and more ${this.state.adjective3}. I admit, that may be true. But those who join the dark side will know ${this.state.adjective4} power bejond their wildest ${this.state.pluralNoun2}. Like me and my ${this.state.noun3}, Darth ${this.state.lastName}, those who practice the dark side of the Force are destined to rule the ${this.state.noun4}! Join us or ${this.state.verb}!`}</p>
                     </div>
                     <button onSubmit={this.handleSubmit}>Try Again</button>
                 </div>
