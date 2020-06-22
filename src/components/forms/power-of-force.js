@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import ObiWanKenobi from "../../../static/assets/images/obi-wan-kenobi.jpg"
+
 export default class ForcePower extends Component {
     constructor(props){
         super(props)
@@ -23,9 +25,13 @@ export default class ForcePower extends Component {
         
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.homeClick = this.homeClick.bind(this);
     }
 
-    
+    homeClick(e){
+        this.props.history.push('/')
+    }
+
     handleSubmit(e){
         e.preventDefault()
         this.setState({
@@ -42,126 +48,177 @@ export default class ForcePower extends Component {
 
     render() {
         return (
-            <div class='mad-libs-wrapper'>
-                The Power of the Force
-                {this.state.active === false ?(
-                <form onSubmit={this.handleSubmit}>
-                    <input
-                        type='text'
-                        name='adjective1'
-                        placeholder='Adjective'
-                        value={this.state.adjective1}
-                        onChange={this.handleChange}
-                    />
-                    
-                    <input
-                        type='text'
-                        name='pluralNoun1'
-                        placeholder='Plural Noun'
-                        value={this.state.pluralNoun1}
-                        onChange={this.handleChange}
-                    />
-                    
-                    <input
-                        type='text'
-                        name='noun1'
-                        placeholder='Noun'
-                        value={this.state.noun1}
-                        onChange={this.handleChange}
-                    />
-                    
-                    <input
-                        type='text'
-                        name='adjective2'
-                        placeholder='Adjective'
-                        value={this.state.adjective2}
-                        onChange={this.handleChange}
-                    />
-                    
-                    <input
-                        type='text'
-                        name='bodyPart1'
-                        placeholder='Part of Body'
-                        value={this.state.bodyPart1}
-                        onChange={this.handleChange}
-                    />
-                    
-                    <input
-                        type='text'
-                        name='adjective3'
-                        placeholder='Adjective'
-                        value={this.state.adjective3}
-                        onChange={this.handleChange}
-                    />
-                    
-                    <input
-                        type='text'
-                        name='pluralNoun2'
-                        placeholder='Plural Noun'
-                        value={this.state.pluralNoun2}
-                        onChange={this.handleChange}
-                    />
-                    
-                    <input
-                        type='text'
-                        name='bodyPart2'
-                        placeholder='Part of Body'
-                        value={this.state.bodyPart2}
-                        onChange={this.handleChange}
-                    />
-                    
-                    <input
-                        type='text'
-                        name='adjective4'
-                        placeholder='Adjective'
-                        value={this.state.adjective4}
-                        onChange={this.handleChange}
-                    />
-                    
-                    <input
-                        type='text'
-                        name='adverb1'
-                        placeholder='Adverb'
-                        value={this.state.adverb1}
-                        onChange={this.handleChange}
-                    />
-                                        
-                    <input
-                        type='text'
-                        name='noun2'
-                        placeholder='Noun'
-                        value={this.state.noun2}
-                        onChange={this.handleChange}
-                    />
-                                        
-                    <input
-                        type='text'
-                        name='bodyPartPlural'
-                        placeholder='Part of Body (Plural)'
-                        value={this.state.bodyPartPlural}
-                        onChange={this.handleChange}
-                    />
-                                        
-                    <input
-                        type='text'
-                        name='adverb2'
-                        placeholder='Adverb'
-                        value={this.state.adverb2}
-                        onChange={this.handleChange}
-                    />
+            <div className="page-content-wrapper jedi" style={{backgroundImage:`url(${ObiWanKenobi})`}}>
+                <div className="content-wrapper">
+                    <h1>The Power of the Force</h1>
+                    {this.state.active === false ?(
+                    <form onSubmit={this.handleSubmit}>
+                        
+                        <div className="input-wrapper">
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='adjective1'
+                                    placeholder='Adjective'
+                                    value={this.state.adjective1}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='pluralNoun1'
+                                    placeholder='Plural Noun'
+                                    value={this.state.pluralNoun1}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='noun1'
+                                    placeholder='Noun'
+                                    value={this.state.noun1}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='adjective2'
+                                    placeholder='Adjective'
+                                    value={this.state.adjective2}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='bodyPart1'
+                                    placeholder='Part of Body'
+                                    value={this.state.bodyPart1}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='adjective3'
+                                    placeholder='Adjective'
+                                    value={this.state.adjective3}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='pluralNoun2'
+                                    placeholder='Plural Noun'
+                                    value={this.state.pluralNoun2}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='bodyPart2'
+                                    placeholder='Part of Body'
+                                    value={this.state.bodyPart2}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='adjective4'
+                                    placeholder='Adjective'
+                                    value={this.state.adjective4}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='adverb1'
+                                    placeholder='Adverb'
+                                    value={this.state.adverb1}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
 
-                    <button type='submit'>Submit</button>
-                </form>): null}
+                            
+                            <div className="input">               
+                                <input
+                                    type='text'
+                                    name='noun2'
+                                    placeholder='Noun'
+                                    value={this.state.noun2}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
 
-                {this.state.active === true ?(
+                                
+                            <div className="input">                   
+                                <input
+                                    type='text'
+                                    name='bodyPartPlural'
+                                    placeholder='Part of Body (Plural)'
+                                    value={this.state.bodyPartPlural}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
 
-                <div class='result'>
-                    <div class='text-wrapper'>
-                        <p>{`The Force is a mystical, ${this.state.adjective1} power. As Jedi Master Obi-Wan Kenobi once said, "The Fource is an energy field, created by all living ${this.state.pluralNoun1}, that surrounds us, penetrates us, and binds the ${this.state.noun1} together."  Using the power of the Force, a Jedi can do many ${this.state.adjective2} things, like using the Force to exercise ${this.state.bodyPart1} control over ${this.state.adjective3}-minded ${this.state.pluralNoun2}. A Jedi can also use the Force to move objects with his or her ${this.state.bodyPart2}. It doesn't matter how ${this.state.adjective4} these objects are; it only matters how ${this.state.adverb1} the Jedi believes in the Force. Most importantly, the Force teaches a Jedi to rely on his or her feelings. As Obi-Wan Kenobi told his student, Luke ${this.state.noun2}-walker: "Your ${this.state.bodyPartPlural} can decieve you. Don't trust them." Instead a Jedi should ${this.state.adverb2} trust in the Force.`}</p>
+                                
+                            <div className="input">                   
+                                <input
+                                    type='text'
+                                    name='adverb2'
+                                    placeholder='Adverb'
+                                    value={this.state.adverb2}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                        </div>
+
+                                                
+                        <div className="buttons">
+                            <button type='submit'>submit</button>
+                            <button onClick={this.homeClick}>Home</button>
+                        </div>
+                    </form>): null}
+
+                    {this.state.active === true ?(
+
+                    <div class='result'>
+                        <div class='text-wrapper'>
+                            <p>The Force is a mystical, <span>{`${this.state.adjective1}`}</span> power. As Jedi Master Obi-Wan Kenobi once said, "The Fource is an energy field, created by all living <span>{`${this.state.pluralNoun1}`}</span>, that surrounds us, penetrates us, and binds the <span>{`${this.state.noun1}`}</span> together."  Using the power of the Force, a Jedi can do many <span>{`${this.state.adjective2}`}</span> things, like using the Force to exercise <span>{`${this.state.bodyPart1}`}</span> control over <span>{`${this.state.adjective3}`}</span>-minded <span>{`${this.state.pluralNoun2}`}</span>. A Jedi can also use the Force to move objects with his or her <span>{`${this.state.bodyPart2}`}</span>. It doesn't matter how <span>{`${this.state.adjective4}`}</span> these objects are; it only matters how <span>{`${this.state.adverb1}`}</span> the Jedi believes in the Force. Most importantly, the Force teaches a Jedi to rely on his or her feelings. As Obi-Wan Kenobi told his student, Luke <span>{`${this.state.noun2}`}</span>-walker: "Your <span>{`${this.state.bodyPartPlural}`}</span> can decieve you. Don't trust them." Instead a Jedi should <span>{`${this.state.adverb2}`}</span> trust in the Force.</p>
+                        </div>
+                        
+                        <div className="buttons">
+                            <button onClick={this.handleSubmit}>Try Again</button>
+                            <button onClick={this.homeClick}>Home</button>
+                        </div>
                     </div>
-                    <button onSubmit={this.handleSubmit}>Try Again</button>
+                    ): null}
                 </div>
-                ): null}
             </div>
         );
     }

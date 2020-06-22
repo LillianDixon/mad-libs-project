@@ -1,7 +1,66 @@
-form {
+form{
     display: flex;
     flex-direction: column;
 
-    input{
+    .input-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    
+    
+        .input{
+            padding: 5px;
+            color: inherit;
+            
+            input {
+                width: 200px;
+                height: 20px;
+                border-radius: 10px;
+                border: 2px solid gold;
+                background-color: rgba(0,0,0,0.5);
+                text-align: center;
+                font-weight: 800;
+                outline: none;
+
+                &::placeholder {
+                    font-weight: 800;
+                }
+            }
+        }
     }
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    margin: 20px;
+    background-color: gold;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid gold;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 800;
+
+    &:hover {
+        background-color: darken(gold, 15%);
+    }
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    p{
+        color: gold;
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+
+
 }

@@ -1,0 +1,26 @@
+.normal{
+
+
+    input{
+        @include alignmentColor('normal');
+
+        &::placeholder{
+            @include alignmentColor('normal');
+        }
+    }
+    
+    span{
+        @include alignmentColor('normal');
+    }
+}
+
+.content-wrapper{
+    .normal{
+        a{
+            &:hover{
+                @include alignmentColor('normal');
+    
+            }
+        }
+    }
+}

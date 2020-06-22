@@ -1,0 +1,26 @@
+.sith{
+
+
+    input{
+        @include alignmentColor('sith');
+
+        &::placeholder{
+            @include alignmentColor('sith');
+        }
+    }
+    
+    span{
+        @include alignmentColor('sith');
+    }
+}
+
+.content-wrapper{
+    .sith{
+        a{
+            &:hover{
+                @include alignmentColor('sith');
+    
+            }
+        }
+    }
+}

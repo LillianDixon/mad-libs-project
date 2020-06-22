@@ -1,0 +1,17 @@
+@font-face{
+    src: url("../../fonts/starjedi/Starjedi.ttf");
+    font-family: star-wars;
+}
+
+@mixin alignmentColor($alignment: 'jedi'){
+    @if $alignment == 'jedi' {
+        color: blue;
+    } @else if $alignment == 'sith'{
+        color: red;
+    }@else{
+        color: lightgreen;
+    }
+}
+
+
+$star-wars: star-wars;

@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import palpatine from "../../../static/assets/images/palpatine.jpg"
+import watto from "../../../static/assets/images/watto.jpg"
 
-export default class DarkSidePower extends Component {
+export default class WattosJunkShop extends Component {
     constructor(props){
         super(props)
 
         this.state={
-            adjective1: "",
-            adjective2: "",
-            adjective3: "",
-            adjective4: "",
-            pluralNoun1: "",
-            pluralNoun2: "",
+            verbing1: "",
+            verbing2: "",
             noun1: "",
             noun2: "",
             noun3: "",
-            noun4: "",
-            adverb: "",
-            verbing: "",
-            lastName: "",
+            pluralNoun1: "",
+            pluralNoun2: "",
+            pluralNoun3: "",
+            pluralNoun4: "",
+            adjective1: "",
+            adjective2: "",
+            adjective3: "",
             verb: "",
+            number: "",
+            bodyPartPlural: "",
             active: false,
         }
         
@@ -49,19 +50,59 @@ export default class DarkSidePower extends Component {
 
     render() {
         return (
-            <div className="page-content-wrapper sith" style={{backgroundImage:`url(${palpatine})`}}>
+            <div className="page-content-wrapper normal" style={{backgroundImage:`url(${watto})`}}>
                 <div className="content-wrapper">
-                    <h1>The Power of the Dark Side</h1>
-                    <h2>By Emperor Palpatine</h2>
+                    <h1>Watto's Junk Shop</h1>
                     {this.state.active === false ?(
                     <form onSubmit={this.handleSubmit}>
                         <div className="input-wrapper">
+                            
+                        <div className="input">
+                                <input
+                                    type='text'
+                                    name='verbing1'
+                                    placeholder='Verb Ending in "ING"'
+                                    value={this.state.verbing1}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='pluralNoun1'
+                                    placeholder='Plural Noun'
+                                    value={this.state.pluralNoun1}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+
                             <div className="input">
                                 <input
                                     type='text'
                                     name='noun1'
                                     placeholder='Noun'
                                     value={this.state.noun1}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='pluralNoun2'
+                                    placeholder='Plural Noun'
+                                    value={this.state.pluralNoun2}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            <div className="input">
+                                <input
+                                    type='text'
+                                    name='verbing2'
+                                    placeholder='Verb Ending in "ING"'
+                                    value={this.state.verbing2}
                                     onChange={this.handleChange}
                                 />
                             </div>
@@ -76,6 +117,16 @@ export default class DarkSidePower extends Component {
                                 />
                             </div>
                             
+                            <div className="input">                    
+                                <input
+                                    type='text'
+                                    name='verb'
+                                    placeholder='Verb'
+                                    value={this.state.verb}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+
                             <div className="input">
                                 <input
                                     type='text'
@@ -85,27 +136,27 @@ export default class DarkSidePower extends Component {
                                     onChange={this.handleChange}
                                 />
                             </div>
-                            
+
                             <div className="input">
                                 <input
                                     type='text'
-                                    name='pluralNoun1'
+                                    name='noun3'
+                                    placeholder='Noun'
+                                    value={this.state.noun3}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            
+                            <div className="input">                    
+                                <input
+                                    type='text'
+                                    name='pluralNoun3'
                                     placeholder='Plural Noun'
-                                    value={this.state.pluralNoun1}
+                                    value={this.state.pluralNoun3}
                                     onChange={this.handleChange}
                                 />
                             </div>
-                            
-                            <div className="input">
-                                <input
-                                    type='text'
-                                    name='verbing'
-                                    placeholder='Verb Ending in "ING"'
-                                    value={this.state.verbing}
-                                    onChange={this.handleChange}
-                                />
-                            </div>
-                            
+
                             <div className="input">
                                 <input
                                     type='text'
@@ -119,29 +170,19 @@ export default class DarkSidePower extends Component {
                             <div className="input">
                                 <input
                                     type='text'
-                                    name='adverb'
-                                    placeholder='Adverb'
-                                    value={this.state.adverb}
-                                    onChange={this.handleChange}
-                                />
-                            </div>
-                            
-                            <div className="input">
-                                <input
-                                    type='text'
                                     name='adjective3'
                                     placeholder='Adjective'
                                     value={this.state.adjective3}
                                     onChange={this.handleChange}
                                 />
                             </div>
-                            
+
                             <div className="input">
                                 <input
                                     type='text'
-                                    name='adjective4'
-                                    placeholder='Adjective'
-                                    value={this.state.adjective4}
+                                    name='bodyPartPlural'
+                                    placeholder='Body Part (Plural)'
+                                    value={this.state.bodyPartPlural}
                                     onChange={this.handleChange}
                                 />
                             </div>
@@ -149,9 +190,9 @@ export default class DarkSidePower extends Component {
                             <div className="input">                    
                                 <input
                                     type='text'
-                                    name='pluralNoun2'
+                                    name='pluralNoun4'
                                     placeholder='Plural Noun'
-                                    value={this.state.pluralNoun2}
+                                    value={this.state.pluralNoun4}
                                     onChange={this.handleChange}
                                 />
                             </div>
@@ -159,42 +200,13 @@ export default class DarkSidePower extends Component {
                             <div className="input">                    
                                 <input
                                     type='text'
-                                    name='noun3'
-                                    placeholder='Noun'
-                                    value={this.state.noun3}
+                                    name='number'
+                                    placeholder='number'
+                                    value={this.state.number}
                                     onChange={this.handleChange}
                                 />
                             </div>
-                            
-                            <div className="input">                   
-                                <input
-                                    type='text'
-                                    name='lastName'
-                                    placeholder='Last Name of Person'
-                                    value={this.state.lastName}
-                                    onChange={this.handleChange}
-                                />
-                            </div>
-                            
-                            <div className="input">                                       
-                                <input
-                                    type='text'
-                                    name='noun4'
-                                    placeholder='Noun'
-                                    value={this.state.noun4}
-                                    onChange={this.handleChange}
-                                />
-                            </div>
-                            
-                            <div className="input">                    
-                                <input
-                                    type='text'
-                                    name='verb'
-                                    placeholder='Verb'
-                                    value={this.state.verb}
-                                    onChange={this.handleChange}
-                                />
-                            </div>
+
                         </div>
                         
                         <div className="buttons">
@@ -206,7 +218,7 @@ export default class DarkSidePower extends Component {
                     {this.state.active === true ?(
 
                     <div class='result'>
-                            <p>As <span>{`${this.state.noun1}`}</span> Sidious--Sith Lord and <span>{`${this.state.adjective1}`}</span> leader of the Galactic Empire--I know firsthand how powerful the dark side of the Force is. If you become a Sith, a/an <span>{`${this.state.noun2}`}</span> who uses the dark side of the Force, you'll have all the powers of the Jedi and more. Unlike the Jedi, who only work with the light side of the Force, the sith can use the dark side to stop the <span>{`${this.state.pluralNoun1}`}</span> he or she love from <span>{`${this.state.verbing}`}</span>. The Jedi would never try such a/an <span>{`${this.state.adjective2}`}</span> thing. It's obvious to anyone who has studied the dark side that it is more powerful than the Jedi could <span>{`${this.state.adverb}`}</span> imagine. The Jedi might tell you that the dark side is quicker, easier, and more <span>{`${this.state.adjective3}`}</span>. I admit, that may be true. But those who join the dark side will know <span>{`${this.state.adjective4}`}</span> power bejond their wildest <span>{`${this.state.pluralNoun2}`}</span>. Like me and my <span>{`${this.state.noun3}`}</span>, Darth <span>{`${this.state.lastName}`}</span>, those who practice the dark side of the Force are destined to rule the <span>{`${this.state.noun4}`}</span>! Join us or <span>{`${this.state.verb}`}</span>!</p>
+                            <p>If you're <span>{`${this.state.verbing1}`}</span> in the Outer Rim Territories and you need spare <span>{`${this.state.pluralNoun1}`}</span> for your space-<span>{`${this.state.noun1}`}</span> or other odds and <span>{`${this.state.pluralNoun2}`}</span>, the place to go is Watto's Junk Shop. Here you can find everything from robots that jump like Mexican <span>{`${this.state.verbing2}`}</span> beans to replacement wires for your <span>{`${this.state.adjective1}`}</span> droid so that is can <span>{`${this.state.verb}`}</span> until it blows a/an <span>{`${this.state.noun2}`}</span>. Be careful what kind of money you have in your <span>{`${this.state.noun3}`}</span> because Watto doesn't take Republic <span>{`${this.state.pluralNoun3}`}</span>. You may have to barter with something <span>{`${this.state.adjective2}`}</span> that you own. The greedy and <span>{`${this.state.adjective3}`}</span> Watto would love to get his grimy <span>{`${this.state.bodyPartPlural}`}</span> on anything that's precious to you. And don't even think about using a Jedi mind trick on Watto -- when he says something costs ten <span>{`${this.state.pluralNoun4}`}</span>, you'd better pay up, or he'll raise the price to <span>{`${this.state.number}`}</span> <span>{`${this.state.pluralNoun4}`}</span>!</p>
                         <div className="buttons">
                             <button onClick={this.handleSubmit}>Try Again</button>
                             <button onClick={this.homeClick}>Home</button>
