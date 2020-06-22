@@ -19,6 +19,13 @@
                 align-items: center;
                 .input-wrapper{
                     grid-template-columns: 1fr;
+
+                    input{
+                        &::placeholder{
+                            
+                            font-size: 1.25em;
+                        }
+                    }
                     
                 }
             }
