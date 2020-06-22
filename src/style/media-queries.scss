@@ -21,8 +21,10 @@
                     grid-template-columns: 1fr;
 
                     input{
+                        color: white;
+                        height: 25px;
                         &::placeholder{
-                            
+                            color: white;
                             font-size: 1.25em;
                         }
                     }
