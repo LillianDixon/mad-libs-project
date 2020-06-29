@@ -6,6 +6,7 @@ import ForcePower from "./forms/power-of-force";
 import DarkSidePower from "./forms/power-of-dark-side";
 import WattosJunkShop from "./forms/wattos-junk-shop";
 import FamilyTree from "./forms/familyTree";
+import Podracer from "./forms/podracer";
 
 export default class App extends Component {
   render() {
@@ -19,6 +20,7 @@ export default class App extends Component {
               <Route path="/power-of-dark-side" component={DarkSidePower}/>
               <Route path="/wattos-junk-shop" component={WattosJunkShop}/>
               <Route path="/familyTree" component={FamilyTree}/>
+              <Route path="/podracer" component={Podracer}/>
             </Switch>
           </div>
         </Router>

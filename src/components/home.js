@@ -20,6 +20,9 @@ export default class Home extends Component {
                         <div className="list-item jedi">
                             <NavLink to='/familyTree'>Star Wars Family Tree</NavLink>
                         </div>
+                        <div className="list-item jedi">
+                            <NavLink to='/podracer'>Piloting a Podracer</NavLink>
+                        </div>
                     </div>
                 </div>
             </div>

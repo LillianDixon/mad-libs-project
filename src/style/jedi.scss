@@ -1,5 +1,21 @@
-.jedi{    
+.page-content-wrapper {
 
+    
+    .content-wrapper{
+        .jedi{
+            a{
+                &:hover{
+                    @include alignmentColor('jedi');
+        
+                }
+            }
+        }
+    }
+}
+
+
+.jedi{    
+    
     input{
         @include alignmentColor('jedi');
 
@@ -10,16 +26,5 @@
 
     span{
         @include alignmentColor('jedi');
-    }
-}
-
-.content-wrapper{
-    .jedi{
-        a{
-            &:hover{
-                @include alignmentColor('jedi');
-    
-            }
-        }
     }
 }

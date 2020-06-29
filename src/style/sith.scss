@@ -1,3 +1,16 @@
+.page-content-wrapper {
+
+    .content-wrapper{
+        .sith{
+            a{
+                &:hover{
+                    @include alignmentColor('sith');
+        
+                }
+            }
+        }
+    }
+}
 .sith{
 
 
@@ -11,16 +24,5 @@
     
     span{
         @include alignmentColor('sith');
-    }
-}
-
-.content-wrapper{
-    .sith{
-        a{
-            &:hover{
-                @include alignmentColor('sith');
-    
-            }
-        }
     }
 }
